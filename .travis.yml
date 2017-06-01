@@ -24,6 +24,7 @@ deploy:
   skip_cleanup: true
   edge:
     branch: heroku-v3-faraday
+  log_level: debug
   run:
     - "rake -T"
     - restart
