@@ -25,9 +25,9 @@ deploy:
   edge:
     branch: heroku-v3
   run:
-    - "date"
+    - "rake -T"
     - restart
-    - "echo foo!"
+    - "bash -c 'date'"
   on:
     branch:
     - gh-pages
