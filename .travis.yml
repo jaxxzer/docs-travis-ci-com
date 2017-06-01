@@ -23,7 +23,7 @@ deploy:
   app: docs-travis-ci-com
   skip_cleanup: true
   edge:
-    branch: heroku-v3
+    branch: heroku-v3-faraday
   run:
     - "rake -T"
     - restart
