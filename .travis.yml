@@ -24,6 +24,10 @@ deploy:
   skip_cleanup: true
   edge:
     branch: heroku-v3
+  run:
+    - "date"
+    - restart
+    - "echo foo!"
   on:
     branch:
     - gh-pages
@@ -33,8 +37,8 @@ notifications:
     rooms:
       secure: LPNgf0Ra6Vu6I7XuK7tcnyFWJg+becx1RfAR35feWK81sru8TyuldQIt7uAKMA8tqFTP8j1Af7iz7UDokbCCfDNCX1GxdAWgXs+UKpwhO89nsidHAsCkW2lWSEM0E3xtOJDyNFoauiHxBKGKUsApJTnf39H+EW9tWrqN5W2sZg8=
     on_success: never
-  webhooks:
-    https://docs.travis-ci.com/update_webhook_payload_doc
+  # webhooks:
+  #   https://docs.travis-ci.com/update_webhook_payload_doc
 install:
   - bundle install --deployment
 before_script:
